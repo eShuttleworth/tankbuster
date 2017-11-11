@@ -1,6 +1,8 @@
 # Import the necessary packages
 import numpy as np
-from .. import cnn
+#from .. import nets as cnn
+import tankbuster.cnn.nets as cnn
+
 from keras.applications.resnet50 import preprocess_input
 from keras.preprocessing.image import load_img, img_to_array
 from keras.utils.data_utils import get_file

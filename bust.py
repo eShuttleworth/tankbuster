@@ -1,6 +1,6 @@
 import os
 import argparse
-from tankbuster.engine import bust
+from tankbuster.engine.detect import bust
 from keras.preprocessing.image import list_pictures
 
 # Set up the argument parser
@@ -35,9 +35,9 @@ if os.path.isdir(user_input):
         pred = max(preds, key=preds.get)
 
         # Print the prediction
-        print "*** {} - predicted {} ({:.2f}%) ...".format(i,
+        print("*** {} - predicted {} ({:.2f}%) ...".format(i,
                                                            pred,
-                                                           preds[pred] * 100)
+                                                           preds[pred] * 100))
 
 # Check if the input is a file
 if os.path.isfile(user_input):
@@ -49,6 +49,6 @@ if os.path.isfile(user_input):
     pred = max(preds, key=preds.get)
 
     # Print the prediction
-    print "*** {} - predicted {} ({:.2f}%) ...".format(user_input,
+    print("*** {} - predicted {} ({:.2f}%) ...".format(user_input,
                                                        pred,
-                                                       preds[pred] * 100)
+                                                       preds[pred] * 100))
